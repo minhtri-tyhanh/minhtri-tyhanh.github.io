@@ -1,3 +1,14 @@
+const form = document.getElementById("wish-form");
+
+form.addEventListener(
+  "submit",
+  function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  },
+  true // 👈 capture phase
+);
+
 const API_URL = "https://wedding-api-tau.vercel.app/api/wishes";
 
 const form = document.getElementById("wish-form");
